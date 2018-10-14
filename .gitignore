@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Mac
+*.DS_Store
+
+# udacity
+*assets/
+*data/
+*dataset/
+*submission/
+*submission.zip
+*checkpoints/
+
 # C extensions
 *.so
 
