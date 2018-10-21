@@ -2,11 +2,11 @@
 Start: 2018/10/10
 Complete: 
 
-# Overview
+## Overview
+### Term 1
+In this term, you'll first become an expert in applying Computer Vision and Deep Learning on automotive problems. You will teach the car to detect lane lines, predict steering angle, and more all based on just camera data.
 
-
-# Projects
-## Term1 Projects
+## Term 1 Projects
 | No.   | Project Name             | Suggested Due Date | Done              |
 | :---: | ------------------------ | -----------------  |:-----------------:|
 | 1     | Finding Lane Line        | -                  |:heavy_check_mark: |
