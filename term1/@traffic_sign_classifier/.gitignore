@@ -5,3 +5,7 @@ models
 *.swp
 *.p
 traffic-signs-data
+*.mp4
+augmented_image
+STN_output
+STN.gif

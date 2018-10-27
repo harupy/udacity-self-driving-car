@@ -36,11 +36,11 @@ def locnet():
 def conv_model(input_shape=(32, 32, 3)):
 	model = Sequential()
 	model.add(Lambda(
-		lambda x: (x - 128) / 128,
+		lambda x: (x - 127.5) / 127.5,
 		input_shape=(32, 32, 3),
 		output_shape=(32, 32, 3)))
-	# model.add(SpatialTransformer(localization_net=locnet(),
-	# 							 output_size=(32, 32)))
+	model.add(SpatialTransformer(localization_net=locnet(),
+								 output_size=(32, 32)))
 
 	model.add(Conv2D(16, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
 	model.add(BatchNormalization())
