@@ -1,9 +1,6 @@
 import numpy as np
-
-from keras.layers import (Activation, Dense, Dropout, Flatten,
-						  Lambda, Input, MaxPooling2D)
+from keras.layers import InputLayer, Activation, Dense, Dropout, Flatten, Lambda, Input, MaxPooling2D
 from keras.layers.convolutional import Conv2D
-from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.normalization import BatchNormalization
 from keras.models import Sequential
 from keras.regularizers import l2
@@ -29,32 +26,21 @@ def locnet():
 	locnet.add(Dense(64))
 	locnet.add(Activation('relu'))
 	locnet.add(Dense(6, weights=weights))
-
 	return locnet
 
 
 def conv_model(input_shape=(32, 32, 3)):
 	model = Sequential()
-	model.add(Lambda(
-		lambda x: (x - 127.5) / 127.5,
-		input_shape=(32, 32, 3),
-		output_shape=(32, 32, 3)))
-	model.add(SpatialTransformer(localization_net=locnet(),
-								 output_size=(32, 32)))
-
+	model.add(InputLayer(input_shape=(32, 32, 3)))
+	model.add(SpatialTransformer(localization_net=locnet(), output_size=(32, 32)))
 	model.add(Conv2D(16, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
 	model.add(BatchNormalization())
-	# model.add(Conv2D(16, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
-	# model.add(BatchNormalization())
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 	model.add(Conv2D(32, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
 	model.add(BatchNormalization())
-	# model.add(Conv2D(32, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
-	# model.add(BatchNormalization())
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 	model.add(Conv2D(64, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
-	# model.add(BatchNormalization())
-	# model.add(Conv2D(64, (3, 3), padding='same', activation='relu', kernel_regularizer=l2(0.05)))
+	model.add(BatchNormalization())
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 	model.add(Flatten())
 	model.add(Dropout(0.6))
