@@ -10,8 +10,8 @@ In this term, you'll first become an expert in applying Computer Vision and Deep
 | No.   | Project Name             | Suggested Due Date | Done              |
 | :---: | ------------------------ | -----------------  |:-----------------:|
 | 1     | Finding Lane Line        | -                  |:heavy_check_mark: |
-| 2     | Advance Lane Finding     | -                  |                   |
-| 3     | Traffic Sign Classifier  | -                  |                   |
+| 2     | Advance Lane Finding     | -                  |:heavy_check_mark: |
+| 3     | Traffic Sign Classifier  | -                  |:heavy_check_mark: |
 | 4     | Behavioral Cloning       | -                  |                   |
 | 5     | Extended Kalman Filter   | -                  |                   |
 
