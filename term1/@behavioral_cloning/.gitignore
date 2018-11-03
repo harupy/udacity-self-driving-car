@@ -1,1 +1,4 @@
 beta_simulator_linux/
+*.h5
+video/
+
