@@ -1,18 +1,16 @@
-# Udacity Self-Driving Car Engineer
-Start: 2018/10/10
+# [Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013)
 
-Complete: 2018/11/11
+A repository to manage the progress in the course.
 
-## Overview
-### Term 1
-In this term, you'll first become an expert in applying Computer Vision and Deep Learning on automotive problems. You will teach the car to detect lane lines, predict steering angle, and more all based on just camera data.
+|Start|Complete|
+|:-|:-|
+|2018/10/10|2018/11/11|
 
-## Term 1 Projects
-| No.   | Project Name             | Suggested Due Date | Done              |
-| :---: | ------------------------ | -----------------  |:-----------------:|
-| 1     | Finding Lane Line        | -                  |:heavy_check_mark: |
-| 2     | Advance Lane Finding     | -                  |:heavy_check_mark: |
-| 3     | Traffic Sign Classifier  | -                  |:heavy_check_mark: |
-| 4     | Behavioral Cloning       | -                  |:heavy_check_mark: |
-| 5     | Extended Kalman Filter   | -                  |:heavy_check_mark: |
-
+## Projects to submit
+| No.   | Project Name             | Deadline   | Done              |
+| :---: | ------------------------ | -----------|:-----------------:|
+| 1     | Finding Lane Line        | 2019/01/10 |:heavy_check_mark: |
+| 2     | Advance Lane Finding     | 2019/01/10 |:heavy_check_mark: |
+| 3     | Traffic Sign Classifier  | 2019/01/10 |:heavy_check_mark: |
+| 4     | Behavioral Cloning       | 2019/01/10 |:heavy_check_mark: |
+| 5     | Extended Kalman Filter   | 2019/01/10 |:heavy_check_mark: |
